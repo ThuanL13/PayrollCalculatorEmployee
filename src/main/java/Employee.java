@@ -1,21 +1,23 @@
 public class Employee {
-    private int employeeID;
+    private int employeeId;
     private String name;
     private double hoursWorked, payRate;
 
     // Constructor with parameters
     public Employee(int employeeID, String name, double payRate, double hoursWorked) {
-        this.employeeID = employeeID;
+        this.employeeId = employeeID;
         this.name = name;
+        this.hoursWorked = hoursWorked;
         this.payRate = payRate;
+
     }
     // Getter and Setters
-    public int getEmployeeID() {
-        return employeeID;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployeeID(int employeeID) {
-        this.employeeID = employeeID;
+    public void setEmployeeId(int employeeID) {
+        this.employeeId = employeeID;
     }
 
     public String getName() {
@@ -40,5 +42,9 @@ public class Employee {
 
     public void setPayRate(double payRate) {
         this.payRate = payRate;
+    }
+
+    public double getGrossPay() {
+        return hoursWorked * payRate;
     }
 }
